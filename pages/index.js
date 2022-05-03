@@ -32,6 +32,6 @@ export const getServerSideProps = async () => {
   return {
     props: { products, bannerData }
   }
-}
+};
 
 export default Home;
