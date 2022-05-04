@@ -2,7 +2,8 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
-        console.log(req.body)
+        console.log(req.body.cartItems)
+        
 
       try {
         // Create Checkout Sessions from body params.
@@ -26,6 +27,7 @@ export default async function handler(req, res) {
             success_url: `${req.headers.origin}/?success=true`,
             cancel_url: `${req.headers.origin}/?canceled=true`,
           }
+
         const session = await stripe.checkout.sessions.create(params);
         res.redirect(303, session.url);
       } catch (err) {
