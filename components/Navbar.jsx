@@ -7,7 +7,6 @@ import {useStateContext} from '../context/StateContext.js'
 
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
-  console.log(totalQuantities)
 
   return (
     <div className="navbar-container">
