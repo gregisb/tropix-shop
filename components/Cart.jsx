@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 
 import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../lib/client';
+import Link from 'next/link';
 
 const Cart = () => {
   const cartRef = useRef();
@@ -19,9 +20,25 @@ const Cart = () => {
             onClick={() => setShowCart(false)}
         >
           <AiOutlineLeft />
-          <span>Your cart</span>
-          <span>({totalQuantities} items)</span>
+          <span className="heading">Your cart</span>
+          <span className="cart-num-items">({totalQuantities} items)</span>
         </button>
+
+        {cartItems.length < 1 && (
+          <div className="empty-cart">
+            <AiOutlineShopping size={150}/>
+            <h3>Your shopping bag is empty</h3>
+            <Link href='/'>
+              <button
+                    type="button"
+                    onClick={() => setShowCart(false)}
+                    className="btn"
+              >
+                Continue shopping
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   )
