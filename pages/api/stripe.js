@@ -2,7 +2,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
-        console.log(req.body.cartItems)
+        console.log(req.body)
 
       try {
         // Create Checkout Sessions from body params.
@@ -10,7 +10,7 @@ export default async function handler(req, res) {
             submit_type: 'pay',
             mode: 'payment',
             payment_method_types: ['card'],
-            billing_adress_collection: 'auto',
+            billing_address_collection: 'auto',
             shipping_options: [
                 { shipping_rate: 'shr_1KvnCaGfPudYr3QlGm8Qxtxn'},
                 { shipping_rate: 'shr_1KvnE3GfPudYr3QlLwcajW2E'},
