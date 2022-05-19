@@ -10,20 +10,19 @@ import getStripe from '../lib/getStripe';
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
   const handleCheckout = async () => {
     const stripe = await getStripe();
 
     const response = await fetch('/api/stripe', {
       method: 'POST',
-      headers: { 
+      headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
       },
       body: JSON.stringify(cartItems),
     });
-    
+
     if(response.statusCode === 500) return;
     
     const data = await response.json();
@@ -73,11 +72,11 @@ const Cart = () => {
                 <div className="flex bottom">
                   <div>
                   <p className="quantity-desc">
-                    <span className="minus" onClick={() => toggleCartItemQuanitity(item._id, 'dec') }>
+                    <span className="minus" onClick={() => toggleCartItemQuantity(item._id, 'dec') }>
                     <AiOutlineMinus />
                     </span>
                     <span className="num" onClick="">{item.quantity}</span>
-                    <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, 'inc') }><AiOutlinePlus /></span>
+                    <span className="plus" onClick={() => toggleCartItemQuantity(item._id, 'inc') }><AiOutlinePlus /></span>
                   </p>
                   </div>
                   <button

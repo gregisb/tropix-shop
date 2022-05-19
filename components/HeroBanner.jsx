@@ -8,7 +8,7 @@ const HeroBanner = ({ heroBanner }) => {
       <div>
         <p className="beats-solo">{heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
-        <h1>{heroBanner.largeText1}</h1>
+        <h1 className="large-text">{heroBanner.largeText1}</h1>
         <img src={urlFor(heroBanner.image)} alt="hero-image" className="hero-banner-image"/>
       
         <div>
@@ -16,7 +16,7 @@ const HeroBanner = ({ heroBanner }) => {
             <button type="button">{heroBanner.buttonText}</button>
           </Link>
           <div className="desc">
-            <h5>Description</h5>
+            <h5>Double LP</h5>
             <p>{heroBanner.desc}</p>
           </div>
         </div>

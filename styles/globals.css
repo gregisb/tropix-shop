@@ -20,10 +20,14 @@ a {
 max-width: 1400px; 
 margin: auto;
 width: 100%;
+background-color: #191919;
+
 
 }
 .layout{
   padding: 10px;
+  background-color: #191919;
+
 }
 
 .navbar-container{
@@ -130,7 +134,7 @@ width: 100%;
 
 .hero-banner-container{
   padding: 100px 40px;
-  background-color: #dcdcdc;
+  background-color: #461111;
   border-radius: 15px;
   position: relative;
   height: 500px;
@@ -166,12 +170,11 @@ width: 100%;
 }
 .hero-banner-image{
   position: absolute;
-  top: 0%;
-  right:20%;
-  width: 450px;
-  height: 450px;
+  top: 10%;
+  right: 20%;
+  width: 350px;
+  height: 350px;
 }
-
 
 .desc{
 position: absolute;
@@ -237,22 +240,26 @@ text-align: end;
   cursor: pointer;
 }
 .banner-desc .left h3{
-  font-weight: 900;
+  font-weight: 800;
   font-size: 80px;
-  margin-left: 25px;
+  margin-left: -26px;
 }
 .banner-desc .left p{
-  margin:18px;
+  margin: 28px;
+  margin-left: -10px
 }
+
 .footer-banner-image{
   position: absolute;
   /* top: -35%;
   left: 8%; */
-  top: -25%;
-  left: 25%;
+  top: 4%;
+  left: 38%;
+  width: 350px;
+  height: 350px;
 }
 .banner-desc .right{
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .banner-desc .right h3{
   font-weight: 800;
