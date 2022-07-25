@@ -25,7 +25,7 @@ const FooterBanner = ({ footerBanner: {
           {/* <h3>{midText}</h3> */}
           <h3>{largeText1}</h3>
 
-          <Link href={`/product/${product}`}>
+          <Link href={`product/fender-stratocaster-jimi-hendrix-signature`}>
             <button type="button">{buttonText}</button>
           </Link>
         </div>
