@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { AiOutlineShopping } from 'react-icons/ai';
+import { GiPalmTree } from 'react-icons/gi'
 
 import { Cart } from './';
 import {useStateContext} from '../context/StateContext.js'
@@ -11,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">Tropix Music Shop</Link>
+      <GiPalmTree size={'1.8rem'} /><Link href="/"> Tropix Music Shop</Link>
       </p>
 
       <button 
